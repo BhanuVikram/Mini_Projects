@@ -1,11 +1,18 @@
-.DS_Store
-.vscode
 *.node_modules/
-*.env
-*.log
+dist
+dist-ssr
+*.local
 
-
-
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,reactnative,react,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,reactnative,react,python
@@ -13,6 +20,7 @@
 ### Node ###
 # Logs
 logs
+*.env
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -526,3 +534,4 @@ Temporary Items
 .apdisk
 
 # End of https://www.toptal.com/developers/gitignore/api/node,reactnative,react,python
+
