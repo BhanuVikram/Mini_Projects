@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #2b89f1;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 3rem;
+  margin-top: 15rem;
+  color: #fff;
+}
+
+textarea {
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  width: 35rem;
+  height: 10rem;
+  resize: none;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30rem;
+  margin-top: 2rem;
+}
+
+/* This styling is for choices created and displayed using JS */
+.choice {
+  font-size: 1rem;
+  display: inline-block;
+  color: #fff;
+  border-radius: 2rem;
+  background-color: #f0942b;
+  padding: 0.5rem 1.25rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+.choice.active {
+  background-color: #263c75;
+}
+
+.replay button {
+  font-size: 1rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  color: #263c75;
+  background-color: #d1e2f7;
+  cursor: pointer;
+}
