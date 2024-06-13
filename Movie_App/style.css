@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #20254b;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: #373b69;
+}
+
+header a {
+  font-family: poppins, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: #6e74ba;
+  transition-duration: 0.2s;
+}
+
+header a:hover {
+  color: #848bdf;
+}
+
+header input {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 1px solid #20254b;
+  border-radius: 25px;
+
+  color: #6e74ba;
+  background-color: transparent;
+}
+
+header input::placeholder {
+  color: #6e74ba;
+}
+
+header input:focus {
+  outline: 1px solid #6e74ba;
+}
+
+/***** MOVIE CONTAINER *****/
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  /* height: 600px; */
+  width: 300px;
+  margin: 20px;
+  position: relative;
+  background-color: #373b69;
+}
+
+.container img {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 16px;
+  color: #edeef0;
+}
+
+.rating {
+  font-size: 16px;
+  font-weight: 400;
+  color: #faa61d;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background-color: #20254b;
+}
+
+.rating.green {
+  color: #4dfa1d;
+}
+
+.rating.red {
+  color: #fa1d1d;
+}
+
+.overview-cont {
+  width: 100%;
+  height: 300px;
+  overflow-y: auto;
+  padding: 30px;
+  background-color: #edeef0;
+  transform: translateY(calc(0% + 14px));
+  transition-duration: 0.3s;
+  box-shadow: 0px -2px 12px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 100%;
+}
+
+.movie:hover .overview-cont {
+  transform: translateY(-100%);
+}
+
+.overview-title {
+  font-size: 22px;
+  font-weight: 400;
+}
