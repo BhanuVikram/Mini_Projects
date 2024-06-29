@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  transition-duration: 0.4s;
+}
+
+:root {
+  --page-light-bg-color: #ffffff;
+  --page-dark-bg-color: #111111;
+
+  --btn-dark-bg-color: #000000;
+  --btn-light-bg-color: #ffffff;
+
+  --font-light-color: var(--page-light-bg-color);
+  --font-dark-color: #000000;
+  --font-grey-color: #898989;
+
+  --clock-center-dark-color: #000000;
+  --clock-center-light-color: #ffffff;
+
+  --hour-hand-light-color: #ffffff;
+  --hour-hand-dark-color: #000000;
+
+  --min-hand-light-color: #ffffff;
+  --min-hand-dark-color: #000000;
+
+  --sec-hand-color: #e64b3b;
+
+  --date-dark-bg-color: #000000;
+  --date-light-bg-color: #ffffff;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 100px 20px;
+  transform: rotate(-90deg);
+}
+
+.clock div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border: 3px solid var(--sec-hand-color);
+  background-color: var(--clock-center-dark-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.hour {
+  width: 80px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--hour-hand-dark-color);
+  transform: translate(0%, -50%) rotate(0deg);
+  z-index: 1;
+}
+
+.min {
+  width: 120px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--hour-hand-dark-color);
+  transform: translate(0%, -50%) rotate(0deg);
+  z-index: 2;
+}
+
+.sec {
+  width: 120px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--sec-hand-color);
+  transform: translate(0%, -50%) rotate(0deg);
+  z-index: 3;
+}
+
+.time {
+  font-size: 60px;
+  font-weight: 300;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.date-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.day-month {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--font-grey-color);
+  margin-right: 5px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: var(--font-light-color);
+  background-color: var(--date-dark-bg-color);
+}
+
+.mode-btn {
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  color: var(--font-light-color);
+  background-color: var(--btn-dark-bg-color);
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Dark Mode */
+
+.dark {
+  background-color: var(--page-dark-bg-color);
+}
+
+.dark .mode-btn {
+  color: var(--font-dark-color);
+  background-color: var(--btn-light-bg-color);
+}
+
+.dark .date {
+  color: var(--font-dark-color);
+  background-color: var(--btn-light-bg-color);
+}
+
+.dark .time {
+  color: var(--font-light-color);
+}
+
+.dark .hour,
+.dark .min,
+.dark .circle {
+  background-color: var(--clock-center-light-color);
+}
