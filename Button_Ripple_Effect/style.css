@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #000000;
+}
+
+.btn {
+  position: relative;
+  padding: 50px 64px;
+  border: 1px solid #18abdc;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #c5eaf5;
+  background-color: #18abdc;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #ffffff;
+  animation-duration: 0.6s;
+  animation-fill-mode: backwards;
+  opacity: 0;
+}
+
+@keyframes grow {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
